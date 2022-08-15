@@ -38,21 +38,15 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  background-image: url('/images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: #110016;
 
   ${({ theme }) => theme.mediaQueries.xs} {
-    background-size: auto;
-    background-repeat: no-repeat;
-    min-height: 90vh;
+    background-color: #110016;
+
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image:url('/images/bg.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    min-height: 90vh;
+    background-color: #110016;
   }
 `
 

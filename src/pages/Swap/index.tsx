@@ -302,8 +302,8 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader
-            title={TranslateString(8, 'Exchange')}
-            description={TranslateString(1192, 'Trade tokens in an instant')}
+            title={TranslateString(8, 'HecoSwap')}
+            description={TranslateString(1192, 'Trade any tokens on HecoSwap')}
           />
           <CardBody>
             <AutoColumn gap="md">
@@ -331,7 +331,7 @@ const Swap = () => {
                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                         onSwitchTokens()
                       }}
-                      style={{ borderRadius: '50%' }}
+                      style={{ borderRadius: '80%' }}
                       scale="sm"
                     >
                       <ArrowDownIcon color="primary" width="24px" />
@@ -375,7 +375,7 @@ const Swap = () => {
 
               {showWrap ? null : (
                 <Card padding=".25rem .75rem 0 .75rem" borderRadius="20px">
-                  <AutoColumn gap="4px">
+                  <AutoColumn gap="0px">
                     {Boolean(trade) && (
                       <RowBetween align="center">
                         <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
@@ -388,7 +388,7 @@ const Swap = () => {
                     )}
                     {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
                       <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
+                        <Text fontSize="14px">{TranslateString(88, 'Slippage')}</Text>
                         <Text fontSize="14px">{allowedSlippage / 100}%</Text>
                       </RowBetween>
                     )}
