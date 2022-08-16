@@ -1,7 +1,7 @@
-import React, { useContext, useMemo } from 'react'
-import { ThemeContext } from 'styled-components'
+import React, { useMemo } from 'react'
 import { Pair } from '@pancakeswap-libs/sdk'
-import { Button, CardBody, Text } from '@pancakeswap-libs/uikit'
+import { CardBody, Text } from '@pancakeswap-libs/uikit'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import CardNav from 'components/CardNav'
 import Question from 'components/QuestionHelper'
@@ -21,7 +21,6 @@ import PageHeader from 'components/PageHeader'
 import AppBody from '../AppBody'
 
 export default function Pool() {
-  const theme = useContext(ThemeContext)
   const { account } = useActiveWeb3React()
   const TranslateString = useI18n()
 
@@ -38,6 +37,29 @@ export default function Pool() {
     account ?? undefined,
     liquidityTokens
   )
+
+  
+  const Button = styled.div<any>`
+      background-image: linear-gradient(to right, #DA01D6 0%, #52018E  51%, #f4c4f3  100%);
+      margin: 0px;
+      margin-top: 20px;
+      padding: 15px 45px;
+      text-align: center;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;            
+      box-shadow: 0 0 10px #eee;
+      border-radius: 10px;
+      display: block;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    `
 
   // fetch the reserves for all V2 pools in which the user has a balance
   const liquidityTokensWithBalances = useMemo(
@@ -70,7 +92,7 @@ export default function Pool() {
           <CardBody>
             <AutoColumn gap="12px" style={{ width: '100%' }}>
               <RowBetween padding="0 8px">
-                <Text color={theme.colors.text}>{TranslateString(107, 'Your Liquidity')}</Text>
+                <Text>{TranslateString(107, 'Your Liquidity')}</Text>
                 <Question
                   text={TranslateString(
                     1170,

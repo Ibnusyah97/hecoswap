@@ -5,7 +5,7 @@ import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
 const StyledNav = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   background-color: transparent;
 `
 
@@ -19,6 +19,9 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
         </ButtonMenuItem>
         <ButtonMenuItem id="pool-nav-link" to="/pool" as={Link}>
           {TranslateString(262, 'HecoPool')}
+        </ButtonMenuItem>
+        <ButtonMenuItem id="staking-nav-link" to="/staking" as={Link}>
+          {TranslateString(262, 'HecoStaking')}
         </ButtonMenuItem>
       </ButtonMenu>
     </StyledNav>

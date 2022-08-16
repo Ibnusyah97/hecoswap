@@ -17,7 +17,6 @@ import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
-import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
 
 const AppWrapper = styled.div`
@@ -26,7 +25,17 @@ const AppWrapper = styled.div`
   align-items: flex-start;
   overflow-x: hidden;
 `
-
+const ImgHeco =  styled.div`
+  background-image: url('/images/hecodex.png');
+  width: 200px;
+  height:auto;
+  min-height: 70px;
+  transition: 0.5s;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+`
 const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,15 +47,11 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  background-color: #110016;
 
   ${({ theme }) => theme.mediaQueries.xs} {
-    background-color: #110016;
-
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-color: #110016;
   }
 `
 
@@ -125,9 +130,9 @@ export default function App() {
             value={{ selectedLanguage, setSelectedLanguage: handleLanguageSelect, translatedLanguage, setTranslatedLanguage }}
           >
             <TranslationsContext.Provider value={{ translations, setTranslations }}>
-              <Menu>
                 <BodyWrapper>
                   <Popups />
+                  <ImgHeco />
                   <Web3ReactManager>
                     <Switch>
                       <Route exact strict path="/swap" component={Swap} />
@@ -146,7 +151,6 @@ export default function App() {
                   </Web3ReactManager>
                   <Marginer />
                 </BodyWrapper>
-              </Menu>
             </TranslationsContext.Provider>
           </LanguageContext.Provider>
         </AppWrapper>

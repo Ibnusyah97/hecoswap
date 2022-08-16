@@ -1,8 +1,7 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
-import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
-import { ThemeContext } from 'styled-components'
+import { CardBody, ArrowDownIcon, IconButton, Text } from '@pancakeswap-libs/uikit'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
@@ -18,6 +17,7 @@ import TokenWarningModal from 'components/TokenWarningModal'
 import SyrupWarningModal from 'components/SyrupWarningModal'
 import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
+import styled from 'styled-components'
 
 import { INITIAL_ALLOWED_SLIPPAGE } from 'constants/index'
 import { useActiveWeb3React } from 'hooks'
@@ -38,6 +38,27 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import AppBody from '../AppBody'
 
 const Swap = () => {
+  const Button = styled.div<any>`
+    background-image: linear-gradient(to right, #DA01D6 0%, #52018E  51%, #f4c4f3  100%);
+    margin: 0px;
+    margin-top: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  `
   const loadedUrlParams = useDefaultsFromURLSearch()
   const TranslateString = useI18n()
 
@@ -70,7 +91,6 @@ const Swap = () => {
   }
 
   const { account } = useActiveWeb3React()
-  const theme = useContext(ThemeContext)
 
   const [isExpertMode] = useExpertModeManager()
 
@@ -363,7 +383,7 @@ const Swap = () => {
                 <>
                   <AutoRow justify="space-between" style={{ padding: '0 1rem' }}>
                     <ArrowWrapper clickable={false}>
-                      <ArrowDown size="16" color={theme.colors.textSubtle} />
+                      <ArrowDown size="16" />
                     </ArrowWrapper>
                     <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
                       - Remove send
