@@ -43,11 +43,11 @@ const Stake = () => {
     margin: 0px;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left:10px;
-    margin-right:10px;
+    margin-left:9px;
+    margin-right:9px;
     display: flex;
     justify-content: center;
-    padding: 10px 15px;
+    padding: 10px 14px;
     text-align: center;
     font-weight: 300;
     font-size: 12px;
@@ -182,10 +182,10 @@ const Stake = () => {
             </AutoColumn>
 
             <AutoRow style={{ padding: '0 1rem' }}>
-            <ButtonDay>7 Day</ButtonDay>
-            <ButtonDay>30 Day</ButtonDay>
-            <ButtonDay>90 Day</ButtonDay>
-            <ButtonDay>365 Day</ButtonDay>
+            <ButtonDay>7 Days</ButtonDay>
+            <ButtonDay>30 Days</ButtonDay>
+            <ButtonDay>90 Days</ButtonDay>
+            <ButtonDay>365 Days</ButtonDay>
             </AutoRow>
 
             <AutoColumn>
