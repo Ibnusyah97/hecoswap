@@ -65,7 +65,7 @@ const Stake = () => {
       margin-right:5px;
       display: flex;
       justify-content: center;
-      padding: 10px 16px;
+      padding: 10px 14px;
       text-align: center;
       font-weight: 300;
       font-size: 10px;
