@@ -56,6 +56,25 @@ const Stake = () => {
     border: 2px #DA01D6;
     border-radius: 10px;
     user-select: none;
+    @media only screen and (max-width: 768px) {
+      background-color: transparent;
+      margin: 0px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      margin-left:5px;
+      margin-right:5px;
+      display: flex;
+      justify-content: center;
+      padding: 5px 10px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 9px;
+      color: white;            
+      box-shadow: 0 0 5px #DA01D6;
+      border: 2px #DA01D6;
+      border-radius: 10px;
+      user-select: none;    
+    }
   `
 
   const RewardPanel = styled.div<any>`
