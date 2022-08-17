@@ -15,6 +15,11 @@ describe('Landing Page', () => {
     cy.url().should('include', '/pool')
   })
 
+  it('allows navigation to stake', () => {
+    cy.get('#stake-nav-link').click()
+    cy.url().should('include', '/stake')
+  })
+
   // Wallet not connected - test will not pass.
   // it('is connected', () => {
   //   cy.get('#web3-status-connected').click()

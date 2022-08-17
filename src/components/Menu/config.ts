@@ -16,6 +16,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/pool',
   },
+  {
+    label: 'Staking',
+    icon: 'PoolIcon',
+    href: '/stake',
+  },
 ]
 
 export default config
