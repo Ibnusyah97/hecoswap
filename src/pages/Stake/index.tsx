@@ -65,10 +65,10 @@ const Stake = () => {
       margin-right:5px;
       display: flex;
       justify-content: center;
-      padding: 5px 10px;
+      padding: 10px 15px;
       text-align: center;
       font-weight: 300;
-      font-size: 9px;
+      font-size: 10px;
       color: white;            
       box-shadow: 0 0 5px #DA01D6;
       border: 2px #DA01D6;
