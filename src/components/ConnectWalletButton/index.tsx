@@ -5,7 +5,7 @@ import useAuth from 'hooks/useAuth'
 import styled from 'styled-components'
 
 const Button = styled.div<any>`
-  background-image: linear-gradient(to right, #DA01D6 0%, #52018E  51%, #f4c4f3  100%);
+  background-image: linear-gradient(to right, #5a7cb2 0%, #1d5891  51%, #193b70  100%);
   margin: 0px;
   margin-top: 20px;
   padding: 15px 45px;
