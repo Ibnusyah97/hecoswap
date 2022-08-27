@@ -160,8 +160,8 @@ const Stake = () => {
       <AppBody>
         <Wrapper id="stake-page">
           <PageHeader
-            title={TranslateString(8, 'HecoStake')}
-            description={TranslateString(1192, 'Stake your Hecodex to get a rewards')}
+            title={TranslateString(8, 'INUStake')}
+            description={TranslateString(1192, 'Stake your InuNetwork to get a rewards')}
           />
           <CardBody>
             <AutoColumn gap="lg">

@@ -322,8 +322,8 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader
-            title={TranslateString(8, 'HecoSwap')}
-            description={TranslateString(1192, 'Trade any tokens on HecoSwap')}
+            title={TranslateString(8, 'INUSwap')}
+            description={TranslateString(1192, 'Trade any tokens on INUSwap')}
           />
           <CardBody>
             <AutoColumn gap="md">
